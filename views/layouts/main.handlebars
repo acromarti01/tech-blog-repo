@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Tech Blog</title>
+</head>
+
+<body>
+  <header>
+    <div class="card header-card">
+      <nav>
+        <div class="nav-wrapper brown darken-4">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a class="yellow-text text-lighten-4" href="/">Home</a></li>
+            <li><a class="yellow-text text-lighten-4" href="/dashboard">Dashboard</a></li>                        
+            {{#if logged_in}}            
+            <li><a id="logout" class="yellow-text text-lighten-4" href="/user/logout">Logout</a></li>
+            {{else}}            
+            <li><a class="yellow-text text-lighten-4" href="/user/login">Login</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </nav>      
+    </div>  
+  </header>
+  <main>
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  
+    {{!-- <div id="main-container" class="main-container"></div> --}}
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="../js/logout.js"></script>
+    {{/if}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+  </main>
+
+  
+</body>
+</html>

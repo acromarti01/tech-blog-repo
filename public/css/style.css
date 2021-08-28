@@ -1,0 +1,111 @@
+* { box-sizing: border-box; }
+
+:root
+{
+    /*Add variables if needed */
+
+    /*Materialize dark brown */
+    --dark: #3e2723;
+    /*Materialize light yellow */
+    --light: #fff9c4;
+   
+}
+
+body
+{
+    background-color: var(--light);
+}
+
+main
+{
+    background-color: var(--light);
+}
+
+.main-header
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.main-container 
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.dashboard-container, .homepage-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.width-container
+{
+    width: 80%;
+    border: 2px solid var(--dark);
+}
+
+.card
+{
+    /* Original style       
+    position: relative;
+    margin: .5rem 0 1rem 0;
+    background-color: #fff;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 2px; */
+    
+    /* New Changes */
+    margin: 0rem;
+    border-radius: 0px;
+    background-color: red;
+}    
+
+.header-card
+{
+    background-color:  var(--dark);
+}
+
+.card-content
+{
+    padding: 0px;
+}
+
+.card-header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*********************************LOGIN & SIGN UP PAGE *****************************************/
+
+.login-card
+{
+    width: 80%;
+    border: 2px solid var(--dark);
+}
+
+.login-btn, .sign-up-btn
+{
+    width: 100%;
+}
+
+/*********************************DASHBOARD PAGE *****************************************/
+
+.dashboard-card, .homepage-card
+{
+    width: 80%;
+    border: 2px solid var(--dark);
+    margin-bottom: 30px;
+}
+
+.create-btn
+{
+    width: 100%;
+}
+

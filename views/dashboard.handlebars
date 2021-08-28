@@ -1,0 +1,13 @@
+<div class="card main-header">
+  <span class="card-title yellow lighten-4 brown-text text-darken-4">Your Dashboard</span>
+</div>
+<div class="dashboard-container">
+  {{#each blogs as |blog|}}
+    {{>dashboard-blogs}}
+  {{/each}}
+  <a id="new-post-btn" class="btn brown darken-4 yellow-text text-lighten-4" href="/dashboard/create-post">
+    <i class="small material-icons left">add</i>New Post</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../js/blog-details.js"></script>
